@@ -1,5 +1,7 @@
-async function index(req, res) {
+function index(req, res) {
     res.render('index', { title: 'Express' });
 }
 
-module.exports = index
+module.exports = {
+    index
+};
