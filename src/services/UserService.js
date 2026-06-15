@@ -1,11 +1,10 @@
 const { User } = require('../models');
 
-class UserService {
-  async getAllUsers() {
+async function getAllUsers() {
     return User.findAll({ order: [['id', 'ASC']] });
   }
 
-  async getUserById(id) {
+async function getUserById(id) {
     const user = await User.findByPk(id);
 
     if (!user) {
@@ -16,6 +15,8 @@ class UserService {
 
     return user;
   }
-}
 
-module.exports = new UserService();
+module.exports = {
+    getAllUsers,
+    getUserById
+}
