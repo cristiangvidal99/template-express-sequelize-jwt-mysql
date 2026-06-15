@@ -24,7 +24,7 @@ async function startServer() {
 }
 
 function normalizePort(value) {
-  const parsedPort = parseInt(value, 10);
+  const parsedPort = Number.parseInt(value, 10);
 
   if (Number.isNaN(parsedPort)) {
     return value;

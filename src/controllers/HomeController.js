@@ -1,7 +1,5 @@
-class HomeController {
-  index(req, res) {
+async function index(req, res) {
     res.render('index', { title: 'Express' });
-  }
 }
 
-module.exports = new HomeController();
+module.exports = index
